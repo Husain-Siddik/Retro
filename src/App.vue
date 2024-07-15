@@ -10,7 +10,7 @@ import Navber from './components/Navber.vue';
 
     </header>
 
-    <div class="bg-orange-600 container mx-auto">
+    <div class=" container mx-auto">
       <RouterView />
     </div>
   </div>
