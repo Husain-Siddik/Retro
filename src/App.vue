@@ -1,23 +1,19 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
 import Navber from './components/Navber.vue';
-import Herocom from './components/Herocom.vue';
+
 </script>
 
 <template>
-  <header class=" container mx-auto">
-    <!-- Navber Start -->
-    <Navber />
-    <!-- Navber End -->
-    <Herocom />
-    <nav>
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
-    </nav>
+  <div class="">
+    <header class="">
+      <Navber />
 
-  </header>
+    </header>
 
-  <RouterView />
+    <div class="bg-orange-600 container mx-auto">
+      <RouterView />
+    </div>
+  </div>
 </template>
 
 <style scoped></style>

@@ -1,10 +1,9 @@
 <script setup>
-// import TheWelcome from '../components/TheWelcome.vue'
-import Navber from '@/components/Navber.vue';
+import Herocom from '../components/Herocom.vue'
 </script>
 
 <template>
   <main>
-    <Navber></Navber>
+    <Herocom />
   </main>
 </template>

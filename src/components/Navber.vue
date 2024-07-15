@@ -1,12 +1,12 @@
 <script setup>
-
+import { RouterLink } from 'vue-router'
 import 'primeicons/primeicons.css'
 
 </script>
 
 <template>
 
-    <div class="navbar bg-base-100">
+    <div class=" w-4/5 mx-auto navbar bg-base-100">
         <div class="navbar-start">
             <div class="dropdown">
                 <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -19,20 +19,32 @@ import 'primeicons/primeicons.css'
                 <ul tabindex="0"
                     class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
 
-                    <li><a>Home</a></li>
-                    <li><a>Edit</a></li>
-                    <li><a>Add User</a></li>
-                    <li><a>About</a></li>
+                    <li><router-link to="/">Home</router-link></li>
+                    <li> <router-link to=""></router-link><a>Edit</a></li>
+                    <li><router-link to=""></router-link><a>Add User</a></li>
+                    <li><router-link to="/about">About</router-link> </li>
                 </ul>
             </div>
             <a class="btn btn-ghost text-xl lg:text-4xl ">ReTro</a>
         </div>
         <div class=" w-1/2 place-content-center  hidden lg:flex">
-            <ul class="menu menu-horizontal px-1">
-                <button class="btn p-4  ml-4"><i class="pi pi-home" style="font-size: 1.5rem"></i></button>
-                <button class="btn p-4  ml-4"><i class="pi pi-pencil" style="font-size: 1.5rem"></i></button>
-                <button class="btn p-4  ml-4"><i class="pi pi-user-plus" style="font-size: 1.5rem"></i></button>
+            <ul class="menu menu-horizontal  lg:px-1 gap-2">
+                <router-link to="/">
+                    <button class="btn "><i class="pi pi-home" style="font-size: 1.5rem"></i>
+                    </button>
+                </router-link>
 
+                <router-link to="">
+                    <button class="btn "><i class="pi pi-pencil" style="font-size: 1.5rem"></i>
+                    </button>
+                </router-link>
+
+                <router-link to="">
+                    <button class="btn "><i class="pi pi-user-plus" style="font-size: 1.5rem"></i></button>
+                </router-link>
+                <router-link :to="{ name: 'about' }">
+                    <button class="btn"><i class="pi pi-table" style="font-size: 1.5rem"></i></button>
+                </router-link>
 
             </ul>
         </div>
